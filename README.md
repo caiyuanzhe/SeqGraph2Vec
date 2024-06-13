@@ -5,12 +5,17 @@ de Bruijn sum graph embedding"]
 
 ## Usage
 
-- To reproduce the results in our paper, run the following script
+- To reproduce the experiments in our paper, run the following script. 
 ```sh
+cd src
+python3 setup.py build_ext -- inplace
+```
+```sh
+cd examples 
 sh examples/run.sh
 ```
-
-Note that: (i) due to the Github storage limitation, currently only toy data set is provided in the repository, and (ii) please fine-tune the hyperparameters in "1_train_kmer_vector.py", "2_train_dna_vector.py" and "3_dna_vector_search.py" under ./examples/ directory, according to own your data sets. 
+Note that: 
+(i) due to the Github storage limitation, currently only toy data set is provided in the repository, and (ii) please fine-tune the hyperparameters in "1_train_kmer_vector.py", "2_train_dna_vector.py" and "3_dna_vector_search.py" under ./examples/ directory, according to own your data sets. 
 
 ## Requirements
 
