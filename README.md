@@ -15,7 +15,7 @@ cd examples
 sh examples/run.sh
 ```
 Note that: 
-(i) due to the Github storage limitation, currently only toy data set is provided in the repository, and (ii) please fine-tune the hyperparameters in "1_train_kmer_vector.py", "2_train_dna_vector.py" and "3_dna_vector_search.py" under ./examples/ directory, according to own your data sets. 
+(i) due to the Github storage limitation, currently only toy data set is provided in the repository (full data sets used in our paper can be downloaded from https://www.ncbi.nlm.nih.gov/), and (ii) please fine-tune the hyperparameters in "1_train_kmer_vector.py", "2_train_dna_vector.py" and "3_dna_vector_search.py" under ./examples/ directory, according to own your data sets. 
 
 ## Requirements
 
