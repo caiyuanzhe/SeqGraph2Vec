@@ -79,9 +79,9 @@ if __name__ == '__main__':
     ###### Step1: train the kmer embedding, you can skip this step if you have pre-trained kmer embedding. ######    
     work_dir = '../data_dir/input/1_data_for_kmer_vector_training/small_data/'
     edge_list_path = work_dir + 'networkfile.edg'
-    mer = 3
+    mer = 8
     dataprocess_workers = 8
-    seq_file_num_to_load = 1  # could set a large value for parallel loading, if possible 
+    seq_file_num_to_load = 10  # could set a large value for parallel loading, if possible 
     alpha_in_pagerank = 0.85
 
     seq_files = list()
