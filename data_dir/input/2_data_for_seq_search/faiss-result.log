@@ -1,0 +1,14 @@
+Took 00:00:00.00 to create faiss index
+faiss stores 15 vectors
+loading faiss index cost 0.000959s
+Took 00:00:00.00 to make search for each query
+make successful search for 2 queries
++-------+----------+
+|   ID  | Accuracy |
++-------+----------+
+| TopK1 |   1.0    |
+| TopK2 |   1.0    |
++-------+----------+
+Took 00:00:01.03 to run accuracy
+
+
