@@ -1,4 +1,4 @@
-"""Different strategies for generating node2vec walks."""
+"""Different strategies for generating node2vec walks, borrowed from https://github.com/krishnanlab/PecanPy"""
 # -*- coding: utf-8 -*-
 import sys
 sys.path.extend(['.', '..'])
