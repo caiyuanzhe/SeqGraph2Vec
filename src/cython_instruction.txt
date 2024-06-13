@@ -1,5 +1,0 @@
-怎么初始化 xxx.pyx 文件？
-
-1. 编写好 xxx.pyx 文件后，在同一目录下新建 1 个setup.py，修改好参数
-2. 命令行cd到 xxx.pyx 文件的目录下面，键入 python3 setup.py build_ext --inplace
-注：若编译失败，则cython_function.pyx的逻辑与kmernode2vec.py的逻辑不一致，请根据cython_function.pyx修改kmernode2vec.py的变量connection_dist
