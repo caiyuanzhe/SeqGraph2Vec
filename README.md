@@ -14,6 +14,4 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ### Datasets
 <p align="justify">
-The code takes FASTA format files with file extension of **.fna**. Note that all training FASTA format files should be under the same input directory. A sample FASTA format file is included in the  `data_dir/input/` directory. </p>
-<p align="justify">
-Training the model is handled by the `src/cli.py` script which provides the following command line arguments.</p>
+The code takes FASTA format files with file extension of **.fna**. Note that all training FASTA format files should be under the same input directory. 
