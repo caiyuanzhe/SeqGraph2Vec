@@ -1,4 +1,4 @@
-"""Sparse Graph equipped with random walk computation."""
+"""Sparse Graph equipped with random walk computation, borrowed from https://github.com/krishnanlab/PecanPy """
 import numpy as np
 from numba import boolean
 from numba import njit
