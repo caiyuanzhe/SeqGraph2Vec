@@ -5,7 +5,7 @@ de Bruijn sum graph embedding"]
 
 ## Usage
 
-- To reproduce the experiments in our paper, run the following script. 
+- To reproduce the experiments in our paper, run the following script:
 ```sh
 cd src
 python3 setup.py build_ext -- inplace
@@ -19,5 +19,7 @@ Note that:
 
 ## Requirements
 
-The codebase is implemented in Python 3.8 package versions.
+- The codebase is implemented in Python 3.8 package versions, run the following command line to download necessary packages:
+```sh
 pip3 install -r requirements.txt
+```
