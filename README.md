@@ -3,6 +3,8 @@
 **This repository is an official Python implementation of**  ["Fast similarity search for DNA sequences through
 de Bruijn sum graph embedding"]
 
+Similarity search of DNA sequences is widely used in many genomic analyses, such as pathogen detection, gene function annotation, and evolutionary relationship discovery. Today, next-generation sequencing (NGS) technologies are generating more and more DNA sequences. This requires more efficient sequence search methods that scale well to large sequence databases. Here, we present a new efficient DNA search algorithm that scales well to large data as shown in experiments. This algorithm involves three innovative techniques:
+(i) de Bruijn sum graph, which is a natural representation of multiple DNA sequences, (ii) sampling from equilibrium distribution instead of traditional uniform distribution, and (iii) a technique to solve the sink difficulty in random walk sampling on the directed graph.
 
 ## Usage
 - To reproduce the experiments in our paper, run the following script:
