@@ -1,6 +1,12 @@
+
+
+*** TopKN-Begin ***
+The total of index: 4
+The index file(s) at：../data_dir/input/2_data_for_seq_search/faiss-index-file
+
 Took 00:00:00.00 to create faiss index
-faiss stores 15 vectors
-loading faiss index cost 0.000959s
+faiss stores 4 vectors
+loading faiss index cost 0.004085s
 Took 00:00:00.00 to make search for each query
 make successful search for 2 queries
 +-------+----------+
@@ -9,6 +15,6 @@ make successful search for 2 queries
 | TopK1 |   1.0    |
 | TopK2 |   1.0    |
 +-------+----------+
-Took 00:00:01.03 to run accuracy
+Took 00:00:01.07 to run accuracy
 
 

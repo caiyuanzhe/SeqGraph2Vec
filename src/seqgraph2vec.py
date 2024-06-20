@@ -8,35 +8,7 @@ from src import walker
 
 
 class SeqGraph2Vec:
-    """ Save a txt file recording all k-mers' related vectors.
-
-    Args:
-        p (float) : return parameter, optional (default = 1)
-            The value less than 1 encourages returning back to
-            previous vertex, and discourage for value grater than 1.
-        q (float) : in-out parameter, optional (default = 0.001)
-            The value less than 1 encourages walks to
-            go "outward", and value greater than 1
-            encourage walking within a localized neighborhood.
-        dimensions (int) : dimensionality of the word vectors
-            (default = 128).
-        num_walks (int): number of walks starting from each node
-            (default = 10).
-        walks_length (int): length of walk
-            (default = 80).
-        window (int) : Maximum distance between the current and
-            predicted k-mer within a sequence (default = 10).
-        min_count (int) : Ignores all k-mers with total frequency
-            lower than this (default = 1)
-        epochs : Number of iterations (epochs) over the corpus
-            (default = 1)
-        workers (int) :  number of threads to be spawned for
-            runing node2vec including walk generation and
-            word2vec embedding, optional (default = 4)
-        verbose (bool) : Whether or not to display walk generation
-            progress (default = True).
-
-    """
+    """ Save a txt file recording all k-mers' related vectors. """
 
     def __init__(
         self,
@@ -81,9 +53,9 @@ class SeqGraph2Vec:
         self.node_idmap = graph.read_edg(edge_list_path, weighted=True, directed=True)
         return graph
 
-    def _simulate_walks(self, graph: nx.classes.graph.Graph, alpha: float = 0.99) -> walker.SparseOTF:
+    def _simulate_walks(self, graph: nx.classes.graph.Graph) -> walker.SparseOTF:
         print('!!!Start to simulate random walks...')
-        return graph.simulate_walks(self.num_walks, self.walks_length,  alpha=alpha, 
+        return graph.simulate_walks(self.num_walks, self.walks_length,  alpha=self.alpha, 
                                     pgr=self.pgr, node_idmap=self.node_idmap)
 
     def _learn_embeddings(
@@ -111,19 +83,16 @@ class SeqGraph2Vec:
     def fit(
         self,
         path_to_edg_list_file: str,
-        path_to_embeddings_file: str,
+        path_to_embedding_file: str,
     ):
         """ Get embeddings of k-mers fragmented from input sequences.
 
         Args:
-            graph (nx.classes.graph.Graph) : nx.DiGraph() object.
-            mer (int) : sliding window length to fragment k-mers.
-                slide only a single nucleotide.
             path_to_edg_list_file (str) : path to k-mers' edges list file.
             path_to_embeddings_file (str) : path to k-mers' embeddings file.
         """
         graph = self._read_graph(edge_list_path=path_to_edg_list_file)
         walks = self._simulate_walks(graph)
-        self._learn_embeddings(walks, path_to_embeddings_file)
+        self._learn_embeddings(walks, path_to_embedding_file)
 
 

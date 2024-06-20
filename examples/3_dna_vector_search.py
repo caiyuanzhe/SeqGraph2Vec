@@ -1,33 +1,10 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path.extend(['.', '..'])
-import os
-import re
-from Bio import SeqIO
-
+import argparse
 from util.faiss_getprecision import create_index
 from util.faiss_getprecision import accuracy
 from util.perf_tools import Tee
-
-
-def parse_seq(path_to_input: str):
-    """ Return a list containing DNA seqment(s) captured in fna file(s)."""
-    seq_files = list()
-    for input_file_dir in path_to_input:
-        print(input_file_dir)
-        for root, dirs, files in os.walk(input_file_dir):
-            for file in files:
-                if file.endswith('.fna'):
-                    seq_files.append(os.path.join(root, file))
-    seqs = list()
-    for seq_file in seq_files:
-        for seq_record in SeqIO.parse(seq_file, 'fasta'):
-            seq = re.sub('[^ACGTacgt]+', '', str(seq_record.seq))
-            seqs.append(seq.upper())
-
-    print('There are ' + str(len(seqs)) + ' seqs')
-
-    return seqs
 
 
 class SequenceRetrieval:
@@ -85,7 +62,15 @@ class SequenceRetrieval:
 
 
 if __name__ == '__main__':
-    work_dir = '../data_dir/input/2_data_for_seq_search/'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--work_dir', type=str, default='../data_dir/input/2_data_for_seq_search/', 
+                        help='the output dir where exists reference/query segments and their embedding vectors. Search result is also produced in this dir.')  
+    parser.add_argument('--vertex_connection', type=int, default=100, help='number of connections each vertex will have') 
+    parser.add_argument('--ef_search', type=int, default=2000, help='depth of layers explored during search') 
+    parser.add_argument('--ef_construction', type=int, default=128, help='depth of layers explored during index construction') 
+    args = parser.parse_args()
+    print(args)
+    work_dir = args.work_dir
 
     clf = SequenceRetrieval(
         ref_segment_file=work_dir+'ref_segment.txt',  # default name
@@ -98,8 +83,8 @@ if __name__ == '__main__':
     )
     clf.train(
         dimension=128,  # set this, consistent with dimensionality of sequence embedding
-        index_method='HNSW',  # default 
-        vertex_connection=100,  # default 
-        ef_search=2000,  # default 
-        ef_construction=128,  # default 
+        index_method='HNSW', 
+        vertex_connection=args.vertex_connection,  
+        ef_search=args.ef_search, 
+        ef_construction=args.ef_construction, 
     )

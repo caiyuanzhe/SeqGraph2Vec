@@ -141,7 +141,7 @@ class Base(BaseGraph):
             id2node_name = node_idmap[i]
             node_name2pgr = pgr[id2node_name]
             nodes_walk.append(
-                num_nodes * num_walks * node_name2pgr
+                max(num_nodes * num_walks * node_name2pgr,1)
             )
         start_node_idx_ary = np.array([])
         for i in range(0, num_nodes):

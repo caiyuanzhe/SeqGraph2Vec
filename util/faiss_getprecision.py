@@ -11,50 +11,6 @@ from prettytable import PrettyTable
 from pecanpy.cli import Timer
 
 
-def ptr_to_file(
-    kmer2vec_method='kmg2vec',
-    seg2vec_method='SeqVectorizer',
-    input_file_dir='../data_dir/output/seg2vec/viral/',
-):
-    """ Return segments & subsegments with their vectors.
-
-    Note:
-        segments and subsegments are actually the same.
-    """
-
-    if not os.path.exists(input_file_dir):
-        raise ValueError(input_file_dir + ' does not exist!')
-
-    try:
-        vec_files = []
-        seg_name = org_subseg_name = None
-        for root, dirs, files in os.walk(input_file_dir):
-            for file in files:
-                if file.endswith('.txt'):
-                    if 'Vectors' in file and kmer2vec_method in file and \
-                            seg2vec_method in file:
-                        vec_files.append(os.path.join(root, file))
-                    if 'SegmentNames' in file and '150bp' in file:
-                        seg_name = os.path.join(root, file)
-                    if 'random' in file and 'OriginalSegmentNames' in file:
-                        org_subseg_name = os.path.join(root, file)
-        try:
-            assert len(vec_files) == 2
-            for file in vec_files:
-                if '-SegmentVectors' in file:
-                    seg_vec = file
-                if '-SubSegmentVectors' in file:
-                    subseg_vec = file
-            assert seg_vec is not None and subseg_vec is not None
-        except ValueError:
-            print('files fail to match')
-
-    except IOError:
-        print('files not found or fail to read')
-
-    return seg_name, seg_vec, org_subseg_name, subseg_vec
-
-
 @Timer('create faiss index')
 def create_index(
     path_to_seg_vec=None,
@@ -189,10 +145,10 @@ def print_accuracy(molecular_nums, denominator):
 
 @Timer('run accuracy\n\n')
 def accuracy(
-    path_to_subseg_vec=None,
-    path_to_subseg_name='../data_dir/output/seg2vec/SegmentNames-150bp.txt',
-    path_to_seg_name='../data_dir/output/seg2vec/SegmentNames-150bp.txt',
-    path_to_faiss_idx=f"../data_dir/output/topKN/{'faiss-idx'}-{'dna2vec'}-{'SeqVectorizer'}",
+    path_to_subseg_vec,
+    path_to_subseg_name,
+    path_to_seg_name,
+    path_to_faiss_idx,
     top_kn=20,
 ):
     """

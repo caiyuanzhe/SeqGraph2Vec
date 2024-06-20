@@ -5,6 +5,7 @@ import os
 from gensim.models import KeyedVectors
 from Bio import SeqIO
 import re
+import argparse
 
 from src.generators import seq2segs
 from src.generators import seg2sentence
@@ -121,23 +122,28 @@ class SequenceEmbeddings:
 
 
 if __name__ == '__main__':
-    work_dir = '../data_dir/input/2_data_for_seq_search/'
-    kmer_size = 8
-    kmer2vec_file = work_dir+f"8mer-kmer-node2vec-embedding.txt"
-    ref_segment_length = 150  # split original DNA sequences into numerous reference segments of length 150 bp 
-    query_segment_number = 2  # extract [query_segment_number] query segments from reference segments. 
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--work_dir', type=str, default='../data_dir/input/2_data_for_seq_search/', help='the output dir where the reference/query segments and their embedding vectors will be produced') 
+    parser.add_argument('--kmer2vec_file', type=str, default='../data_dir/input/2_data_for_seq_search/'+"kmer-embedding.txt", help='the pretrained k-mer embedding vector file') 
+    parser.add_argument('--kmer_size', type=int, default=8, help='be consistent with the length k of pre-trained k-mers') 
+    parser.add_argument('--ref_segment_length', type=int, default=150, help='split original DNA sequences into numerous reference segments of length 150 bp')
+    parser.add_argument('--query_segment_number', type=int, default=2, help='extract [query_segment_number] query segments from reference segments, with the length of each query as ref_segment_length/2') 
+    args = parser.parse_args()
+    print(args)
+    assert os.path.exists(args.kmer2vec_file)
 
     # Note: if there already exists segment files, we won't overwrite it
     clf = SequenceEmbeddings(
-        seq_dir=work_dir, 
-        mer=kmer_size,  # set this, consistent with the length k of pre-trained k-mers
-        kmer2vec_file=kmer2vec_file,  # set this
-        ref_segment_length=ref_segment_length,  # set this
-        query_segment_number=query_segment_number,  # set this
-        ref_segment_file=work_dir+'ref_segment.txt',  # default name
-        query_ref_segment_file=work_dir+'query_ref_segment.txt',  # default name
-        query_segment_file=work_dir+'query_segment.txt',  # default name
-        sequence_vec_output_dir=work_dir,
+        seq_dir=args.work_dir, 
+        mer=args.kmer_size,  # set this, consistent with the length k of pre-trained k-mers
+        kmer2vec_file=args.kmer2vec_file,  # set this
+        ref_segment_length=args.ref_segment_length,  # set this
+        query_segment_number=args.query_segment_number,  # set this
+        ref_segment_file=args.work_dir+'ref_segment.txt',  # default name: the extracted reference segments
+        query_ref_segment_file=args.work_dir+'query_ref_segment.txt',  # default name: the query segments extracted from above reference segments
+        query_segment_file=args.work_dir+'query_segment.txt',  # default name: the ground-true reference segments where the query segments are split from
+        sequence_vec_output_dir=args.work_dir,
     )
     clf.train()
 
