@@ -45,3 +45,7 @@ This research work was financially supported by Shenzhen Second People's Hospita
 
 
 ### References
+**node2vec**
+* Grover, A. and Leskovec, J. (2016) node2vec: Scalable Feature Learning for Networks. ArXiv160700653 Cs Stat.
+Original _node2vec_ software and networks
+  * https://snap.stanford.edu/node2vec/ contains the original software and the networks (PPI, BlogCatalog, and Wikipedia) used in the original study (Grover and Leskovec, 2016).
