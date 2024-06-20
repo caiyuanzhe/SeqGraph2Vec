@@ -60,23 +60,12 @@ Due to the Github storage limitation, currently only toy data set is provided in
 
 | Data set | File |
 |:-----|:---------------------|
-| 1 G | bacteria.10.1.genomic.fna |		
-|     | bacteria.13.1.genomic.fna |		
-|     | bacteria.14.1.genomic.fna |
-| 2 G | bacteria.13.1.genomic.fna |
-|     | bacteria.14.1.genomic.fna |
-|     | bacteria.15.1.genomic.fna |
-|     | bacteria.17.1.genomic.fna |
-|     | bacteria.18.1.genomic.fna | 
-| 3 G | bacteria.13.1.genomic.fna |
-|     | bacteria.14.1.genomic.fna | 
-|     | bacteria.15.1.genomic.fna |
-|     | bacteria.17.1.genomic.fna |
-|     | bacteria.18.1.genomic.fna |
-|     | bacteria.19.1.genomic.fna |
+| bacteria | bacteria.19.1.genomic.fna |
 |     | bacteria.20.1.genomic.fna |
-|     | fungi.12.1.genomic.fna |
-|     | fungi.15.1.genomic.fna |
+| fungi | fungi.10.1.genomic.fna |
+|     | fungi.11.1.genomic.fna |
+| viral | viral.1.1.genomic.fna |
+|       | viral.2.1.genomic.fna |
 | 4 G | bacteria.10.1.genomic.fna |
 |     | bacteria.13.1.genomic.fna |
 |     | bacteria.14.1.genomic.fna |
@@ -96,25 +85,26 @@ Due to the Github storage limitation, currently only toy data set is provided in
 |     | fungi.9.1.genomic.fna |
 |     | viral.1.1.genomic.fna |
 |     | viral.2.1.genomic.fna |
-| bacteria | bacteria.10.1.genomic.fna |
-|     | bacteria.13.1.genomic.fna |
+
+<!--
+| 1 G | bacteria.10.1.genomic.fna |		
+|     | bacteria.13.1.genomic.fna |		
 |     | bacteria.14.1.genomic.fna |
+| 2 G | bacteria.13.1.genomic.fna |
+|     | bacteria.14.1.genomic.fna |
+|     | bacteria.15.1.genomic.fna |
+|     | bacteria.17.1.genomic.fna |
+|     | bacteria.18.1.genomic.fna | 
+| 3 G | bacteria.13.1.genomic.fna |
+|     | bacteria.14.1.genomic.fna | 
 |     | bacteria.15.1.genomic.fna |
 |     | bacteria.17.1.genomic.fna |
 |     | bacteria.18.1.genomic.fna |
 |     | bacteria.19.1.genomic.fna |
 |     | bacteria.20.1.genomic.fna |
-| fungi | fungi.10.1.genomic.fna |
-|     | fungi.11.1.genomic.fna |
 |     | fungi.12.1.genomic.fna |
 |     | fungi.15.1.genomic.fna |
-|     | fungi.16.1.genomic.fna |
-|     | fungi.17.1.genomic.fna |
-|     | fungi.2.1.genomic.fna |
-|     | fungi.8.1.genomic.fna |
-|     | fungi.9.1.genomic.fna |
-| viral | viral.1.1.genomic.fna |
-|       | viral.2.1.genomic.fna |
+-->
 
 ## Additional Information
 ### Support
