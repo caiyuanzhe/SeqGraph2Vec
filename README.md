@@ -86,5 +86,5 @@ This research work was financially supported by Shenzhen Second People's Hospita
 **PageRank**
 * Page L, Brin S, Motwani R, et al. The pagerank citation ranking: Bringing order to the web[J]. 1999.
 
-**Faiss**
+**HNSW**
 * Malkov Y A, Yashunin D A. Efficient and robust approximate nearest neighbor search using hierarchical navigable small world graphs[J]. IEEE transactions on pattern analysis and machine intelligence, 2018, 42(4): 824-836.
