@@ -1,4 +1,4 @@
-# Fast similarity search for DNA sequences through de Bruijn sum graph embedding
+![image](https://github.com/caiyuanzhe/SeqGraph2Vec/assets/33817996/9b9237e1-4056-49d2-a9ec-ca4e901074a5)# Fast similarity search for DNA sequences through de Bruijn sum graph embedding
 
 Similarity search of DNA sequences is widely used in many genomic analyses. Today, next-generation sequencing (NGS) technologies are generating more and more DNA sequences. This requires more efficient sequence search methods that scale well to large sequence databases. Here, we present a new efficient DNA search algorithm, SeqGraph2Vec (+HNSW), that scales well to large data as shown in experiments, and provide Python implementation in this repository. 
 
@@ -58,6 +58,15 @@ python3 3_dna_vector_search.py --help
 ### Data sets
 Note: due to the Github storage limitation, currently only toy data set is provided in the repository (full data sets used in our paper can be downloaded from [https://ftp.ncbi.nlm.nih.gov/genomes/refseq/](https://ftp.ncbi.nlm.nih.gov/refseq/release/)).
 
+Such as:
+| Data set | File |
+|:-----|:---------------------|
+| 1 G | 352M 1-bacteria.10.1.genomic.fna		
+387M 1-bacteria.13.1.genomic.fna		
+376M 1-bacteria.14.1.genomic.fna	|
+| 2 G| (≥10k nodes, ≥0.1% and <20% of edges) or (<10k nodes, ≥0.1% edges) | 
+| 3 G | >20% of edges |
+| 4 G | >20% of edges |
 
 ## Additional Information
 ### Support
