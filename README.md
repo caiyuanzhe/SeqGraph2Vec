@@ -96,7 +96,25 @@ Due to the Github storage limitation, currently only toy data set is provided in
 |     | 156M 1-fungi.9.1.genomic.fna |
 |     | 199M 1-viral.1.1.genomic.fna |
 |     | 181M 1-viral.2.1.genomic.fna |
-
+| bacteria | 352M 1-bacteria.10.1.genomic.fna |
+|     | 387M 1-bacteria.13.1.genomic.fna |
+|     | 376M 1-bacteria.14.1.genomic.fna |
+|     | 376M 1-bacteria.15.1.genomic.fna |
+|     | 343M 1-bacteria.17.1.genomic.fna |
+|     | 360M 1-bacteria.18.1.genomic.fna |
+|     | 357M 1-bacteria.19.1.genomic.fna |
+|     | 349M 1-bacteria.20.1.genomic.fna |
+| fungi | 123M 1-fungi.10.1.genomic.fna |
+|     | 19M 1-fungi.11.1.genomic.fna |
+|     | 158M 1-fungi.12.1.genomic.fna |
+|     | 146M 1-fungi.15.1.genomic.fna |
+|     | 68M 1-fungi.16.1.genomic.fna |
+|     | 139M 1-fungi.17.1.genomic.fna |
+|     | 123M 1-fungi.2.1.genomic.fna |
+|     | 118M 1-fungi.8.1.genomic.fna |
+|     | 156M 1-fungi.9.1.genomic.fna |
+| viral | 199M 1-viral.1.1.genomic.fna |
+|       | 181M 1-viral.2.1.genomic.fna |
 
 ## Additional Information
 ### Support
