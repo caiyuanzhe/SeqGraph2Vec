@@ -39,7 +39,7 @@ python3 2_train_dna_vector.py --work_dir='../data_dir/input/2_data_for_seq_searc
 ### DNA similarity search as DNA vector search
 
 DNA sequence search is transformed into a vector data search, which can be implemented very efficiently in vector search technology such as Faiss. 
-Before running the command line, make sure that `all the produced files in the previous step` (i.e., Computing DNA sequence embedding vectors) is placed in `work_dir` in advance. 
+Before running the command line, make sure that `all the produced files in the previous step` (i.e., Computing DNA sequence embedding vectors) are placed in `work_dir` in advance. 
 
 ```bash
 cd examples
