@@ -17,7 +17,7 @@ $ pip3 install -r requirements.txt
 ### Training k-mer embedding vectors
 
 To train k-mer embedding vectors using *SeqGraph2Vec*, execute the following command from the *examples/* directory. 
-Before running the command line, all input DNA sequence files should be placed in *input_data_dir* in advance. An example of input data file is "data_dir/input/small_data/toy_seqs.fna".
+Before running the command line, all input DNA sequence files should be placed in *input_data_dir* in advance. An example of input data file is *"data_dir/input/small_data/toy_seqs.fna"*.
 After running the command line, a k-mer embedding vector file is produced --- *path_to_kmer_embedding_file*.
 
 ```bash
