@@ -33,7 +33,7 @@ For support, please consider opening a GitHub issue and we will do our best to r
 Alternatively, if you would like to keep the conversation private, feel free to contact Yuanzhe Cai at caiyuanzhe@sztu.edu.cn
 
 ### License
-This repository and all its contents are released under the Apache License 2.0{https://www.apache.org/licenses/LICENSE-2.0}
+This repository and all its contents are released under the Apache License 2.0(https://www.apache.org/licenses/LICENSE-2.0).
 
 ### Authors
 Zhaochong Yu<sup>a</sup>, Zihang Yang<sup>a</sup>, Chris Ding<sup>c</sup>, Feijuan Huang<sup>c</sup>,<sup>*</sup> and Yuanzhe Cai <sup>a</sup>,<sup>*</sup>
