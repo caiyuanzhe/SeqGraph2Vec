@@ -4,11 +4,13 @@ Similarity search of DNA sequences is widely used in many genomic analyses. Toda
 
 ## Installation
 
-Install latest version with:
+Install latest version and compile with:
 ```bash
 $ git clone https://github.com/caiyuanzhe/SeqGraph2Vec.git
 $ cd SeqGraph2Vec
 $ pip3 install -r requirements.txt
+$ cd src
+$ python3 setup.py build_ext -- inplace
 ```
 
 ## Usage
