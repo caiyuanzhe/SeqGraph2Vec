@@ -17,8 +17,8 @@ $ pip3 install -r requirements.txt
 ### Training k-mer embedding vectors
 
 To train k-mer embedding vectors using *SeqGraph2Vec*, execute the following command from the *examples/* directory. 
-Before running the command line, all input DNA sequence files should be placed in *input_data_dir* in advance. An example of input data file is *"data_dir/input/small_data/toy_seqs.fna"*.
-After running the command line, a k-mer embedding vector file is produced --- *path_to_kmer_embedding_file*.
+Before running the command line, all input DNA sequence files should be placed in `input_data_dir` in advance. An example of input data file is `"data_dir/input/small_data/toy_seqs.fna"`.
+After running the command line, a k-mer embedding vector file is produced --- `path_to_kmer_embedding_file`.
 
 ```bash
 cd examples
@@ -28,7 +28,7 @@ python3 1_train_kmer_vector.py --input_data_dir='../data_dir/input/1_data_for_km
 ### Computing DNA sequence embedding vectors
 
 Once obtaining the k-mer embedding vectors, for a given input DNA sequence, the embedding vectors of its constituent k-mers are averaged to produce the sequence's embedding vector.
-Before running the command line, several files including *the pretrained k-mer embedding vector file* (e.g. *path_to_kmer_embedding_file* in the above command line), and *the DNA input sequence files* that need to be vectorized should be placed in *work_dir* in advance. 
+Before running the command line, several files including `the pretrained k-mer embedding vector file` (e.g. `path_to_kmer_embedding_file` in the above command line), and `the DNA input sequence files` that need to be vectorized should be placed in `work_dir` in advance. 
 After running the command line, reference segments and query segments will be extracted from *the DNA input sequence files* as well as their corresponding sequence embedding vectors.
 
 ```bash
@@ -39,7 +39,7 @@ python3 2_train_dna_vector.py --work_dir='../data_dir/input/2_data_for_seq_searc
 ### DNA similarity search as DNA vector search
 
 DNA sequence search is transformed into a vector data search, which can be implemented very efficiently in vector search technology such as Faiss. 
-Before running the command line, make sure that all the produced files in the previous step (i.e., Computing DNA sequence embedding vectors) is placed in *work_dir* in advance. 
+Before running the command line, make sure that `all the produced files in the previous step` (i.e., Computing DNA sequence embedding vectors) is placed in `work_dir` in advance. 
 
 ```bash
 cd examples
