@@ -60,11 +60,11 @@ Due to the Github storage limitation, currently only toy data set is provided in
 
 | Data set | File |
 |:-----|:---------------------|
-| bacteria | bacteria.19.1.genomic.fna |
+| Bacteria | bacteria.19.1.genomic.fna |
 |     | bacteria.20.1.genomic.fna |
-| fungi | fungi.10.1.genomic.fna |
+| Fungi | fungi.10.1.genomic.fna |
 |     | fungi.11.1.genomic.fna |
-| viral | viral.1.1.genomic.fna |
+| Viral | viral.1.1.genomic.fna |
 |       | viral.2.1.genomic.fna |
 | 4 G | bacteria.10.1.genomic.fna |
 |     | bacteria.13.1.genomic.fna |
