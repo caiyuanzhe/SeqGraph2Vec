@@ -77,7 +77,7 @@ This research work was financially supported by Shenzhen Second People's Hospita
 
 
 ### References
-**node2vec**
+**Node2Vec**
 * Grover A, Leskovec J. node2vec: Scalable feature learning for networks[C]//Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining. 2016: 855-864.
   
 **PecanPy**
