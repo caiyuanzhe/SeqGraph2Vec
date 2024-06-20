@@ -3,31 +3,13 @@
 **This repository is an official Python implementation of**  ["Fast similarity search for DNA sequences through
 de Bruijn sum graph embedding"]
 
-## Requirements
-- Python Version: 3.8
-- arrow==1.2.2
-- Bio==1.5.3
-- faiss_cpu==1.7.3
-- gensim==4.1.0
-- icecream==2.1.1
-- Logbook==1.5.3
-- networkx==2.6.3
-- numba==0.54.1
-- numba_progress==0.0.2
-- numpy==1.20.3
-- nptyping==2.4.1
-- pandas==1.5.2
-- pecanpy==2.0.6
-- prettytable==3.2.0
-- psutil==5.9.1
-- scikit_learn==1.2.1
-- scipy==1.7.3
-- setuptools==58.0.4
-- tqdm==4.62.3
 
 ## Usage
 
 - To reproduce the experiments in our paper, run the following script:
+```sh 
+pip3 install -r requirements.txt  # Python Version: 3.8
+```
 ```sh
 cd src
 python3 setup.py build_ext -- inplace
