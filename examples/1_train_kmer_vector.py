@@ -77,7 +77,7 @@ def split_list(lst, n):
 if __name__ == '__main__':
 
     ###### Step1: train the kmer embedding, you can skip this step if you have pre-trained kmer embedding. ######    
-    work_dir = '../data_dir/input/1_data_for_kmer_vector_training/small_data/'
+    work_dir = '../data_dir/input/1_data_for_kmer_vector_training/small_data/'  # set this, all input data sets should be placed in one directory. An example of input data is given in "data_dir/input/small_data/toy_seqs.fna".
     edge_list_path = work_dir + 'networkfile.edg'
     mer = 8
     dataprocess_workers = 8
