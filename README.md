@@ -35,8 +35,9 @@ Alternatively, if you would like to keep the conversation private, feel free to 
 
 
 ## Authors
-Zhaochong Yu<sup>2</sup>, Zihang Yang a, Chris Ding b, Feijuan Huang c,* and Yuanzhe Cai a,*
+Zhaochong Yu<sup>a</sup>, Zihang Yang<sup>a</sup>, Chris Ding<sup>c</sup>, Feijuan Huang<sup>c</sup>,<sup>*</sup> and Yuanzhe Cai <sup>a</sup>,<sup>*</sup>
 
-a Shenzhen Technology University, Shenzhen 518118, China, b The Chinese University of Hong Kong, Shenzhen, Shenzhen 518172, China, c The Second People’s Hospital of Shenzhen, Shenzhen 518037, China.
+<sup>a</sup>Shenzhen Technology University, Shenzhen 518118, China, <sup>b</sup>The Chinese University of Hong Kong, Shenzhen, Shenzhen 518172, China, <sup>c</sup>The Second People’s Hospital of Shenzhen, Shenzhen 518037, China.
+
 ## Funding
 This research work was financially supported by Shenzhen Second People's Hospital COVID-19 Emergency Clinical Research Project (2023xgyj3357009), Shenzhen Science and Technology Program (20231127194506001), the Shenzhen Science and Technology Innovation Committee Funds (JSGG20220919091404008), the National Natural Science Foundation of China-81804154 and 2023 Special Fund for Science and Technology Innovation Strategy of Guangdong Province (Science and Technology Innovation Cultivation of College Students) (Pdjh2023b0468).
