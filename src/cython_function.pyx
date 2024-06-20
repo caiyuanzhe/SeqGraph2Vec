@@ -2,13 +2,13 @@
 from tqdm import tqdm
 cimport cython
 
-@cython.boundscheck(False)  # 关闭边界检查
-@cython.wraparound(False)   # 关闭负索引包装
+@cython.boundscheck(False)  
+@cython.wraparound(False)   
 cpdef inline extract_kmer(str seq, int mer):
     return [seq[i:i+mer] for i in range(len(seq) - mer + 1)]
 
-@cython.boundscheck(False)  # 关闭边界检查
-@cython.wraparound(False)   # 关闭负索引包装
+@cython.boundscheck(False)  
+@cython.wraparound(False)   
 cpdef dict fast_compute_edge_weight(list seqs, int mer):
     cdef dict weight_dict = dict()
     cdef list k_mers
