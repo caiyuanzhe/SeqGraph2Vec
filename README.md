@@ -32,6 +32,7 @@ Before running the command line, several files including *the pretrained k-mer e
 After running the command line, reference segments and query segments will be extracted from *the DNA input sequence files* as well as their corresponding sequence embedding vectors.
 
 ```bash
+cd examples
 python3 2_train_dna_vector.py --work_dir='../data_dir/input/2_data_for_seq_search/' --path_to_kmer_embedding_file='../data_dir/input/2_data_for_seq_search/kmer-embedding.txt' --kmer_size=8 --ref_segment_length=150 --query_segment_number=2
 ```
 
@@ -41,6 +42,7 @@ DNA sequence search is transformed into a vector data search, which can be imple
 Before running the command line, make sure that all the produced files in the previous step (i.e., Computing DNA sequence embedding vectors) is placed in *work_dir* in advance. 
 
 ```bash
+cd examples
 python3 3_dna_vector_search.py --work_dir='../data_dir/input/2_data_for_seq_search/' --vertex_connection=100 --ef_search=2000 --ef_construction=128
 ```
 
