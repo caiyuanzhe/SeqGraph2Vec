@@ -47,3 +47,9 @@ This research work was financially supported by Shenzhen Second People's Hospita
 ### References
 **node2vec**
 * Grover A, Leskovec J. node2vec: Scalable feature learning for networks[C]//Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining. 2016: 855-864.
+**PecanPy**
+* Liu R, Krishnan A. PecanPy: a fast, efficient and parallelized Python implementation of node2vec[J]. Bioinformatics, 2021, 37(19): 3377-3379.
+**PageRank**
+* Page L, Brin S, Motwani R, et al. The pagerank citation ranking: Bringing order to the web[J]. 1999.
+**Faiss**
+* Malkov Y A, Yashunin D A. Efficient and robust approximate nearest neighbor search using hierarchical navigable small world graphs[J]. IEEE transactions on pattern analysis and machine intelligence, 2018, 42(4): 824-836.
