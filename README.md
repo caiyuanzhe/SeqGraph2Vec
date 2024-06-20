@@ -56,7 +56,7 @@ python3 3_dna_vector_search.py --help
 ```
 
 ### Data sets
-Note: due to the Github storage limitation, currently only toy data set is provided in the repository (full data sets used in our paper can be downloaded from [https://www.ncbi.nlm.nih.gov/]([https://ftp.ncbi.nlm.nih.gov/genomes/refseq/](https://ftp.ncbi.nlm.nih.gov/refseq/release/))).
+Note: due to the Github storage limitation, currently only toy data set is provided in the repository (full data sets used in our paper can be downloaded from [https://ftp.ncbi.nlm.nih.gov/genomes/refseq/](https://ftp.ncbi.nlm.nih.gov/refseq/release/)).
 
 
 ## Additional Information
