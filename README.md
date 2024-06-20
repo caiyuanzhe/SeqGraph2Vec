@@ -56,7 +56,7 @@ python3 3_dna_vector_search.py --help
 ```
 
 ### Data sets
-Due to the Github storage limitation, currently only toy data set is provided in the repository. Full data sets used in our paper can be downloaded from [https://ftp.ncbi.nlm.nih.gov/genomes/refseq/](https://ftp.ncbi.nlm.nih.gov/refseq/release/)). Each data set contains DNA files with specific ids, which are provided below:
+Due to the Github storage limitation, currently only toy data set is provided in the repository. Full data sets used in our paper can be downloaded from [https://ftp.ncbi.nlm.nih.gov/genomes/refseq/](https://ftp.ncbi.nlm.nih.gov/refseq/release/)). Each data set contains DNA files with specific `ids` (e.g., `fungi.10.1.genomic.fna`), which are provided below:
 
 | Data set | File |
 |:-----|:---------------------|
